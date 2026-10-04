@@ -37,8 +37,11 @@
 * JavaScript
 * React.js
 * Next.js (App Router)
-* MongoDB
+* Rest Api
 * NextAuth
+* MongoDB
+* Authentication
+* Authorization
 * bcryptjs
 
 ---
@@ -79,6 +82,19 @@ http://localhost:3000
 
 ---
 
+
+## 👨‍💼 دسترسی ادمین
+
+برای تست بخش مدیریت می‌توانید از ایمیل و رمز زیر استفاده کنید:
+
+```text
+Email: parsa@gmail.com
+password: 12345
+```
+
+این حساب دارای Role ادمین بوده و به پنل مدیریت دسترسی دارد.
+برای رفتن به پنل ادمین به آدرس /admin بروید.
+
 ## 🧪 ویژگی‌های اصلی پروژه
 
 ✨ قابلیت‌ها:
@@ -93,6 +109,7 @@ http://localhost:3000
 * مدیریت دسترسی کاربران و ادمین
 * ذخیره و مدیریت اطلاعات آگهی‌ها در MongoDB
 * طراحی رابط کاربری برای نمایش اطلاعات املاک
+
 
 ---
 
