@@ -1,34 +1,140 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Amlak | پلتفرم ثبت و مدیریت آگهی املاک
 
-## Getting Started
+## 📝 توضیح کوتاه پروژه
 
-First, run the development server:
+املاک یک پلتفرم فول‌استک برای ثبت، جستجو و مدیریت آگهی‌های ملکی است که کاربران می‌توانند در آن آگهی‌های مختلف املاک را مشاهده و جستجو کرده و همچنین آگهی ملک خود را ثبت کنند.
+
+هدف آن شبیه‌سازی یک سیستم واقعی مدیریت آگهی‌های املاک با تمرکز بر احراز هویت، مدیریت کاربران و کنترل آگهی‌ها است.
+
+---
+
+## 🖼 دمو پروژه
+
+🎥 دموی آنلاین پروژه (در حال آماده‌سازی...)
+
+📸 پیش‌نمایش:
+
+![Preview](./public/images/screenshot1.png)
+![Preview](./public/images/screenshot2.png)
+![Preview](./public/images/screenshot3.png)
+![Preview](./public/images/screenshot4.png)
+![Preview](./public/images/screenshot5.png)
+![Preview](./public/images/screenshot12.png)
+![Preview](./public/images/screenshot7.png)
+![Preview](./public/images/screenshot8.png)
+![Preview](./public/images/screenshot9.png)
+![Preview](./public/images/screenshot10.png)
+![Preview](./public/images/screenshot11.png)
+
+---
+
+## 🚀 تکنولوژی‌ها و ابزارهای استفاده‌شده
+
+### ⚙️ تکنولوژی‌ها
+
+* HTML
+* CSS
+* JavaScript
+* React.js
+* Next.js (App Router)
+* MongoDB
+* NextAuth
+* bcryptjs
+
+---
+
+## 🛠 روش نصب و اجرای پروژه
+
+### 📥 نصب
+
+1. کلون کردن ریپازیتوری:
+
+```bash
+git clone https://github.com/parsamehrpooshan/Amlak.git
+```
+
+2. ورود به پوشه پروژه:
+
+```bash
+cd Amlak
+```
+
+3. نصب پکیج‌ها:
+
+```bash
+npm install
+```
+
+4. اجرای پروژه در حالت توسعه:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📍 سپس پروژه روی آدرس زیر در دسترس خواهد بود:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## 🧪 ویژگی‌های اصلی پروژه
 
-To learn more about Next.js, take a look at the following resources:
+✨ قابلیت‌ها:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* احراز هویت کاربران با JWT و ذخیره‌سازی توکن در کوکی با استفاده از NextAuth
+* ثبت‌نام و ورود کاربران با ایمیل و رمز عبور
+* رمزنگاری رمز عبور کاربران با استفاده از bcryptjs
+* پنل ادمین برای مدیریت آگهی‌ها(ثبت و حذف)
+* نمایش و جستجوی آگهی‌های املاک با استفاده از فیلترها
+* امکان ثبت آگهی توسط کاربران
+* داشبورد کاربری برای مشاهده اطلاعات پروفایل و آگهی های ثبت شده
+* مدیریت دسترسی کاربران و ادمین
+* ذخیره و مدیریت اطلاعات آگهی‌ها در MongoDB
+* طراحی رابط کاربری برای نمایش اطلاعات املاک
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔐 احراز هویت و سطح دسترسی
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+سیستم احراز هویت پروژه با استفاده از **NextAuth** پیاده‌سازی شده است.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+همچنین با استفاده از سیستم احراز هویت و کنترل دسترسی، امکانات مختلف بر اساس نقش کاربر در اختیار او قرار می‌گیرد:
+
+* 👤 **User:** ثبت آگهی و مدیریت آگهی‌های شخصی
+* 👑 **Admin:** مدیریت و بررسی آگهی‌های ثبت‌شده و حذف آگهی‌ها
+
+
+---
+
+## 🗄 دیتابیس
+
+برای ذخیره‌سازی اطلاعات کاربران و آگهی‌های املاک از **MongoDB** استفاده شده است.
+
+اطلاعاتی مانند:
+
+* اطلاعات کاربران
+* اطلاعات آگهی‌ها
+* وضعیت تأیید آگهی
+* اطلاعات مربوط به مالک آگهی
+
+در دیتابیس ذخیره و مدیریت می‌شوند.
+
+رمز عبور کاربران نیز پیش از ذخیره شدن در دیتابیس با استفاده از **bcryptjs** رمزنگاری می‌شود.
+
+---
+
+## 📞 اطلاعات تماس
+
+📩 ارتباط با من:
+
+* Email: [parsamehrpooshan@gmail.com](mailto:parsamehrpooshan@gmail.com)
+
+---
+
+## ✅ نکات پایانی
+
+* پروژه مستمر آپدیت می‌شود و قابلیت‌های جدیدی به آن اضافه خواهد شد.
+* خوشحال می‌شوم اگر پیشنهاد یا بازخوردی برای بهبود پروژه داشتید به من اطلاع دهید 🙌
+* اگر پروژه را دوست داشتید، به ریپازیتوری استار بدید ⭐
