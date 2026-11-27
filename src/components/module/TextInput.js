@@ -1,4 +1,4 @@
-import styles from "@/module/textInput.module.css";
+import styles from "@/module/TextInput.module.css";
 import { p2e } from "@/utils/replaceNumber";
 
 function TextInput({

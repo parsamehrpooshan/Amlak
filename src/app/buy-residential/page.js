@@ -1,18 +1,13 @@
 import BuyResidentialsPage from "@/template/BuyResidentialsPage";
+import Profile from "@/models/Profile";
+import connectDB from "@/utils/connectDB";
 import React from "react";
 
 async function BuyResidentials({ searchParams }) {
-  console.log(searchParams);
-  // بهتر است در کامپوننت های سرورساید از ای پی آی روت استفاده نکنیم(این مورد حالت تمرینی دارد)
-  const res = await fetch("http://localhost:3000/api/profile", {
-    cache: "no-store",
-  });
-  const data = await res.json();
-  console.log(data);
+  await connectDB();
+  const profiles = await Profile.find({ published: true }).select("-userId");
 
-  if (data.error) return <h3>مشکلی پیش آمده است...</h3>;
-
-  let finalData = data.data;
+  let finalData = JSON.parse(JSON.stringify(profiles));
   if (searchParams.category) {
     finalData = finalData.filter((i) => i.category === searchParams.category);
   }
